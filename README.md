@@ -9,3 +9,10 @@
 - var stdin = process.openStdin();
 - stdin.on('data', function(chunk) { console.log("Got chunk: " + chunk); });
 
+- Or another solution is in this link: https://blog.logrocket.com/using-stdout-stdin-stderr-node-js/
+
+- process.stdin.on("data", data => {
+    data = data.toString().toUpperCase()
+    process.stdout.write(data + "\n")
+})
+
